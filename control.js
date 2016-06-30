@@ -1,16 +1,6 @@
 $(document).ready(function() {
-    var weatherQueries = ["What's the weather like here", "what's the weather like here", "weather"];
-    var temperature;
-    var conditions;
     var idTracker = 1;
 
-    // var weatherCurrent = function(city) {
-    //     Weather.getCurrent(city, function(current) {
-    //         temperature = Math.round(Weather.kelvinToCelsius(current.temperature()) * 100) / 100;
-    //         conditions = current.conditions();
-    //     });
-    // }
-    //
     $('#text-field').on('keyup', function() {
         var textField = $(this);
         var controlArea = $('#control');
@@ -32,26 +22,6 @@ $(document).ready(function() {
         var controlArea = $('#control');
         var contentArea = $('#content');
         var value = textField.val();
-
-        // if ($.inArray(value, weatherQueries) > -1) {
-        //     // var currentResults = weatherCurrent('Cebu City');
-        //     var city = 'Cebu City';
-        //     temperature = conditions = '';
-        //     weatherCurrent(city);
-        //     setTimeout(function() {
-        //         contentArea.empty();
-        //         contentArea.append('<div class="card" id="weather-card"><div class="top-content"><img src="http://beautifulpixels.com/wp-content/uploads/2014/12/sun-dribbble-new2.gif" alt="weather" /></div><div class="supporting-text"><div class="title">'+ city +'</div><p>Temperature: ' + temperature + '&deg; C</p><p>Condition: '+ conditions +'</p></div></div>');
-        //     }, 1500); // lolz asynchronous calling how
-        // } else if (value.indexOf('?') > -1) {
-        //     var cityString = value.split('in')[1];
-        //     var city = cityString.substring(0, cityString.length - 1);
-        //     temperature = conditions = '';
-        //     weatherCurrent(city);
-        //     setTimeout(function() {
-        //         contentArea.empty();
-        //         contentArea.append('<div class="card" id="weather-card"><div class="top-content"><img src="http://beautifulpixels.com/wp-content/uploads/2014/12/sun-dribbble-new2.gif" alt="weather" /></div><div class="supporting-text"><div class="title">'+ city +'</div><p>Temperature: ' + temperature + '&deg; C</p><p>Condition: '+ conditions +'</p></div></div>');
-        //     }, 1500); // lolz asynchronous calling how
-        // }
 
         if (value.indexOf(' in ') > -1) {
             var cityString = value.split(' in ')[1];
